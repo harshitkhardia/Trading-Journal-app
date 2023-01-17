@@ -16,7 +16,7 @@ export default function DashBoard(){
               <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
               <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Journal')}>Journal</a>
 
-                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Filters')} >Filters</a>
+              <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Filters')} >Filters</a>
 
               <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={()=>console.log('you have clicked on projects')}>Projects</a>
 
@@ -26,7 +26,9 @@ export default function DashBoard(){
 
               <a href="/myrules" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Your Rules')}>Your Rules</a>
                     
-              <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Alerts')}>Alerts</a>
+              <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Alerts')}> Alerts </a>
+
+              <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Add Trades')}>Add Trades</a>
             </div>
           </div>
         </div>
