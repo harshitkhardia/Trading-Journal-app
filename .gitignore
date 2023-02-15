@@ -1,2 +1,40 @@
 */node_modules/*
 node_modules
+*/__pycache__/*
+frontend/static/frontend/main.js
+frontend/static/frontend/main.js.LICENSE.txt
+*/migrations/*
+frontend/migrations/
+api/migrations/*
+*.log
+*.pot
+
+
+# Byte-compiled / optimized / DLL files
+*/__pycache__/*
+*/__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST

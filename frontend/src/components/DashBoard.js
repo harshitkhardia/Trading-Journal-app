@@ -1,20 +1,22 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
+import AddTrades from './AddTrades';
 
-export default function DashBoard(){
-    return(
-<div className="min-h-full">
-  <nav className="bg-gray-800">
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="flex h-16 items-center justify-between">
-        <div className="flex items-center">
-          <div className="flex-shrink-0">
-            <img className="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"/>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
-              <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Journal')}>Journal</a>
+export default function DashBoard(props) {
+  const [addTradeTab,setaddTradeTab] = useState(0);
+  return(   
+  <div className="min-h-full">
+    <nav className="bg-gray-800">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex h-16 items-center justify-between">
+          <div className="flex items-center">
+            <div className="flex-shrink-0">
+              <img className="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"/>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-4">
+               <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+               <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Journal')}>Journal</a>
 
               <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Filters')} >Filters</a>
 
@@ -28,7 +30,7 @@ export default function DashBoard(){
                     
               <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Alerts')}> Alerts </a>
 
-              <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => console.log('you have clicked on Add Trades')}>Add Trades</a>
+                  <a  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" onClick={() => { setaddTradeTab(1); console.log('you have clicked on Alerts') }} >Add Trades</a>
             </div>
           </div>
         </div>
@@ -117,13 +119,15 @@ export default function DashBoard(){
   <header className="bg-white shadow">
     <div className="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
       <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-      <p className="text font-bold tracking-tight text-gray-900 -3xl">welcome to your trading journal</p>
+            <p className="text font-bold tracking-tight text-gray-900 -3xl">welcome  to your trading journal</p>
     </div>
   </header>
   <main>
     <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <div className="px-4 py-6 sm:px-0">
-        <div className="h-96 rounded-lg border-4 border-dashed border-gray-200"></div>
+            <div className="h-96 rounded-lg border-4 border-dashed border-gray-200">
+              { addTradeTab == 1 ? <div> <AddTrades/>  </div> : "" }
+            </div>
       </div>
     </div>
   </main>

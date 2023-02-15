@@ -124,15 +124,14 @@ return (
         <div className="px-4 py-6 sm:px-0">
             <div className="h-96 rounded-lg border-4 border-dashed border-gray-200">
                     <ul id="rulesList" className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
-                        <a> 1. No more than 2% risk per trades<br/></a>
-                        <a> 2. No more than 4% daily risk <br></br></a>
-                        <a> 3. Close your system after 5R where R=1% <br/></a>
-                        <a> 4. cut your losing trade and ride your wining trades <br/></a>
-                        <a> 5. number your trading only 4 5 trades a day don't trade before confirmations <br/> </a>
-                        <a> 6. Don't Trade with closing of the candle </a>
+                        <li> 1. No more than 2.1 % risk per trades<br/></li>
+                        <li> 2. No more than 4 % daily risk <br></br></li>
+                        <li> 3. Close your system after 5R where R=1% <br/></li>
+                        <li> 4. cut your losing trade and ride your wining trades <br/></li>
+                        <li> 5. number your trading only 4 5 trades a day don't trade before confirmations <br/> </li>
+                        <li> 6. Don't Trade with closing of the candle </li>
                     </ul>            
             </div>
-
         </div>
     </div>
   </main>

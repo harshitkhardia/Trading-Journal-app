@@ -2,8 +2,6 @@ import React from "react";
 import { RouterProvider, createBrowserRouter,useRouteError} from 'react-router-dom';
 import * as ReactDOM from 'react-dom/client';
 import MyRules from './components/MyRules';
-import DashBoard from "./components/DashBoard";
-import SideBar from "./components/SideBar";
 import '../static/css/index.css';
 const root = ReactDOM.createRoot(document.getElementById("app"));
 function ErrorBoundary() {
@@ -14,7 +12,7 @@ function ErrorBoundary() {
 const router = createBrowserRouter([
     {
         path: "/",
-    element: (<div> <DashBoard /></div>),
+    element: (<div> <MyRules /></div>),
     //errorElement: (<ErrorBoundary />),
     },
     {
@@ -25,4 +23,5 @@ const router = createBrowserRouter([
 root.render(
   <RouterProvider router={router} />
 );
+
 

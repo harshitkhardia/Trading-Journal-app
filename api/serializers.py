@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import Todo, Reporter, Article, Executions
+from .models import Todo, Reporter, Article, Executions,Trade_Starter,Trades
+import datetime
 
 class TodoSerializers(serializers.ModelSerializer):
     class Meta:
@@ -15,10 +16,20 @@ class ExecutionsSerializers(serializers.ModelSerializer):
 class ReporterSerializers(serializers.ModelSerializer):
     class Meta:
         model = Reporter
-        fields = ('id', 'first_name', 'last_name', 'email')
+        fields = ('id','first_name','last_name','email')
 
 
 class ArticleSerializers(serializers.ModelSerializer):
     class Meta:
         model = Article
-        fields = ('id', 'pub_date ', 'headline ', 'reporter ')
+        fields = '__all__'
+class Trade_StarterSerializers(serializers.ModelSerializer):
+    class Meta:
+        model=Trade_Starter
+        fields = '__all__'
+
+
+class TradeSerializers(serializers.ModelSerializer):
+    class Meta:
+        model = Trades
+        fields = '__all__'
